@@ -17,7 +17,6 @@ function getPlayerChoice(){
 
         default:
             console.log("invalid choice")
-            //getPlayerChoice()
     }
 }
 
