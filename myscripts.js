@@ -29,21 +29,20 @@ function playRound(computerChoice, playerChoice){
             if (playerChoice === 1) {output = "Player wins"}
             if (playerChoice === 2) {output = "Computer wins"}
             return(output)
-        break;
+
         //Computer selects paper
         case (computerChoice === 1):
             if (playerChoice === 0) {output = "Computer wins"}
             if (playerChoice === 1) {output = "Draw"}
             if (playerChoice === 2) {output = "Player wins"}
             return(output)
-        break;
+
         //Computer selects scissors
         case (computerChoice === 2):
             if (playerChoice === 0) {output = "Player wins"}
             if (playerChoice === 1) {output = "Computer wins"}
             if (playerChoice === 2) {output = "Draw"}
             return(output)
-        break;
 
         default:
             return(output)
