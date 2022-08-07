@@ -3,8 +3,22 @@ function getComputerChoice(){
 }
 
 function getPlayerChoice(){
-    const playerChoice = prompt("What's your choice?");
-    return(parseInt(playerChoice))
+    const playerChoice = prompt("What's your choice?").toLowerCase();
+    console.log(playerChoice);
+    switch(true) {
+        case (playerChoice === "rock"):
+            return (0)
+
+        case (playerChoice === "paper"):
+            return (1)
+
+        case (playerChoice === "scissors"):
+            return (2)
+
+        default:
+            console.log("invalid choice")
+            //getPlayerChoice()
+    }
 }
 
 function playRound(computerChoice, playerChoice){
