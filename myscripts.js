@@ -50,9 +50,18 @@ function playRound(computerChoice, playerChoice){
 }
 
 
-
-for (let i = 0; i < 5; i++) {
+/* for (let i = 0; i < 5; i++) {
     const computerChoice = getComputerChoice();
     const playerChoice = getPlayerChoice();
     console.log("game: " + playRound(computerChoice, playerChoice));
- }
+ }  */
+
+
+
+var btns = document.querySelectorAll('.btn');
+btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const buttonSelected = btn.innerHTML;
+        console.log(buttonSelected);
+    });
+})
