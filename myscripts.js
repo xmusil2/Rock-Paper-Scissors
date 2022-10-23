@@ -15,23 +15,32 @@ function playRound(computerChoice, playerChoice){
     switch(true) {
         //Computer selects rock
         case (computerChoice === 0):   
-            if (playerChoice === 0) {output = "Draw"}
-            if (playerChoice === 1) {output = "Player wins"}
-            if (playerChoice === 2) {output = "Computer wins"}
+            if (playerChoice === 0) {output = "Draw<br> Computer" +
+        " selection: Rocks <br>VS <br>Player selection: Rock"}
+            if (playerChoice === 1) {output = "Player wins<br> Computer" +
+            " selection: Rocks <br>VS <br>Player selection: Paper"}
+            if (playerChoice === 2) {output = "Computer wins<br> Computer" +
+            " selection: Rocks <br>VS <br>Player selection: Scissors"}
             return(output)
 
         //Computer selects paper
         case (computerChoice === 1):
-            if (playerChoice === 0) {output = "Computer wins"}
-            if (playerChoice === 1) {output = "Draw"}
-            if (playerChoice === 2) {output = "Player wins"}
+            if (playerChoice === 0) {output = "Computer wins<br> Computer" +
+            " selection: Paper <br>VS <br>Player selection: Rock"}
+            if (playerChoice === 1) {output = "Draw<br> Computer" +
+            " selection: Paper <br>VS <br>Player selection: Paper"}
+            if (playerChoice === 2) {output = "Player wins<br> Computer" +
+            " selection: Paper <br>VS <br>Player selection: Scissors"}
             return(output)
 
         //Computer selects scissors
         case (computerChoice === 2):
-            if (playerChoice === 0) {output = "Player wins"}
-            if (playerChoice === 1) {output = "Computer wins"}
-            if (playerChoice === 2) {output = "Draw"}
+            if (playerChoice === 0) {output = "Player wins<br> Computer" +
+            " selection: Scissors <br>VS <br>Player selection: Rock"}
+            if (playerChoice === 1) {output = "Computer wins<br> Computer" +
+            " selection: Scissors <br>VS <br>Player selection: Paper"}
+            if (playerChoice === 2) {output = "Draw<br> Computer" +
+            " selection: Scissors <br>VS <br>Player selection: Scissors"}
             return(output)
 
         default:
