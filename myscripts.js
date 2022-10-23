@@ -6,9 +6,6 @@ btns.forEach((btn) => {
         const computerChoice = Math.floor(Math.random() * 3);
         const playerChoice = parseInt(btn.id);
         result.innerHTML = playRound(computerChoice, playerChoice);
-        console.log(computerChoice);
-        console.log(playerChoice);
-        console.log("game: " + playRound(computerChoice, playerChoice));
     });
 })
 
