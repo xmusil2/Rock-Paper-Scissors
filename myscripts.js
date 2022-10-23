@@ -55,13 +55,3 @@ function playRound(computerChoice, playerChoice){
     const playerChoice = getPlayerChoice();
     console.log("game: " + playRound(computerChoice, playerChoice));
  }  */
-
-
-
-var btns = document.querySelectorAll('.btn');
-btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const buttonSelected = btn.innerHTML;
-        console.log(buttonSelected);
-    });
-})
