@@ -1,27 +1,20 @@
-function getComputerChoice(){
-    return(Math.floor(Math.random() * 3))
-}
+const btns = document.querySelectorAll('.btn');
+const result = document.getElementById('result');
 
-function getPlayerChoice(){
-    const playerChoice = prompt("What's your choice?").toLowerCase();
-    console.log(playerChoice);
-    switch(true) {
-        case (playerChoice === "rock"):
-            return (0)
-
-        case (playerChoice === "paper"):
-            return (1)
-
-        case (playerChoice === "scissors"):
-            return (2)
-
-        default:
-            console.log("invalid choice")
-    }
-}
+btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const computerChoice = Math.floor(Math.random() * 3);
+        const playerChoice = parseInt(btn.id);
+        result.innerHTML = playRound(computerChoice, playerChoice);
+        console.log(computerChoice);
+        console.log(playerChoice);
+        console.log("game: " + playRound(computerChoice, playerChoice));
+    });
+})
 
 function playRound(computerChoice, playerChoice){
-    let output = "Error occured"
+    let output = "Error occured";
+
     switch(true) {
         //Computer selects rock
         case (computerChoice === 0):   
@@ -48,6 +41,7 @@ function playRound(computerChoice, playerChoice){
             return(output)
     }
 }
+
 
 
 /* for (let i = 0; i < 5; i++) {
