@@ -63,11 +63,3 @@ function playRound(computerChoice, playerChoice){
             return(output)
     }
 }
-
-
-
-/* for (let i = 0; i < 5; i++) {
-    const computerChoice = getComputerChoice();
-    const playerChoice = getPlayerChoice();
-    console.log("game: " + playRound(computerChoice, playerChoice));
- }  */
