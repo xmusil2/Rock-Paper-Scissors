@@ -1,3 +1,55 @@
-h1 {
-    color: pink;
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
 }
+
+body{
+    background-color: indigo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.github {
+    height: 20px;
+    width: auto;
+}
+
+.start_game_heading {
+    font-size: 60px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+
+.start_game_btn {
+    background-color: white;
+    border: none;
+    color: green;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 44px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 14px;
+
+}
+
+.start_game_btn:hover{
+    background-color: green;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gainsboro;
+    color: white;
+    text-align: center;
+  }

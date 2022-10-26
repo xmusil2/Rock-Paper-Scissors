@@ -1,8 +1,24 @@
+let heading = document.createElement('h1');
+heading.innerHTML = 'Rock paper scissors'
+heading.className = 'start_game_heading'
+document.body.appendChild(heading);
+
+let btn = document.createElement('button');
+btn.innerHTML = 'Play game';
+btn.className = 'start_game_btn'
+btn.onclick = function () {
+    alert("Button is clicked");
+  };
+document.body.appendChild(btn);
+
+
+
 const btns = document.querySelectorAll('.btn');
 const result = document.getElementById('result');
 
+
 btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
         const computerChoice = Math.floor(Math.random() * 3);
         const playerChoice = parseInt(btn.id);
         result.innerHTML = playRound(computerChoice, playerChoice);
@@ -10,7 +26,7 @@ btns.forEach((btn) => {
 })
 
 function playRound(computerChoice, playerChoice){
-    let output = "Error occured";
+    let output = 'Error occured';
 
     switch(true) {
         //Computer selects rock
