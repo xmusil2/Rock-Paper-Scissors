@@ -1,29 +1,46 @@
-let heading = document.createElement('h1');
+const heading = document.createElement('h1');
 heading.innerHTML = 'Rock paper scissors'
 heading.className = 'start_game_heading'
 document.body.appendChild(heading);
 
-let btn = document.createElement('button');
-btn.innerHTML = 'Play game';
-btn.className = 'start_game_btn'
-btn.onclick = function () {
-    alert("Button is clicked");
-  };
-document.body.appendChild(btn);
+const btn_start = document.createElement('button');
+btn_start.innerHTML = 'Play game';
+btn_start.className = 'start_game_btn'
+btn_start.onclick = setUpGame;
+document.body.appendChild(btn_start);
 
+function setUpGame(){
+    heading.remove();
+    btn_start.remove();
 
+    const informatice_heading = document.createElement('h1');
+    informatice_heading.id = 'informatice_heading';
+    informatice_heading.innerHTML = 'Select your choice';
+    document.body.appendChild(informatice_heading);
 
-const btns = document.querySelectorAll('.btn');
-const result = document.getElementById('result');
+    const selectdiv = document.createElement('div')
+    selectdiv.className = 'player_selections';
+    const btn_images = ['Rock', 'Paper', 'Scissors'];
+    for (var i = 0; i < 3; i++){
+        var btn = document.createElement('input');
+        btn.className = 'btn_images';
+        btn.id = i;
+        btn.type = 'image';
+        btn.src = './images/' + btn_images[i] +'.png';
+        selectdiv.appendChild(btn);
+    }
+    document.body.appendChild(selectdiv);
 
+    const btns = document.querySelectorAll('.btn_images');
+    btns.forEach((btn) => {
+        btn.addEventListener('click', () => {
 
-btns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        const computerChoice = Math.floor(Math.random() * 3);
-        const playerChoice = parseInt(btn.id);
-        result.innerHTML = playRound(computerChoice, playerChoice);
+            const computerChoice = Math.floor(Math.random() * 3);
+            const playerChoice = parseInt(btn.id);
+            informatice_heading.innerHTML = playRound(computerChoice, playerChoice);
+        });
     });
-})
+}
 
 function playRound(computerChoice, playerChoice){
     let output = 'Error occured';

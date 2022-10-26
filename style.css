@@ -52,4 +52,19 @@ footer {
     background-color: gainsboro;
     color: white;
     text-align: center;
-  }
+}
+
+.player_selections * {
+
+    max-width: 200px;
+    max-height: 150px;
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    margin: 10px;
+    border: 5px solid transparent;
+}
+
+.btn_images:hover {
+    border: 5px dotted green;
+}
