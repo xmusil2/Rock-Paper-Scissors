@@ -68,3 +68,47 @@ footer {
 .btn_images:hover {
     border: 5px dotted green;
 }
+
+
+.healtbars {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: white;
+    justify-content: space-between;
+
+}
+
+.healtbars * {
+    display: flex;
+    padding: 15px;
+    background-color: yellow;
+    color: black;
+    align-items: center;
+    font-weight: bold;
+}
+
+.playerHealthBar {
+    border-bottom-right-radius: 20px;
+}
+
+.playerHealthBar div {
+    padding: 0px;
+    font-size: 35px;
+}
+.computerHealthBar {
+    border-bottom-left-radius: 20px;
+}
+
+.computerHealthBar div {
+    padding: 0;
+    font-size: 35px;
+}
+
+.red {
+    color: red;
+}
+ .grey {
+    color: grey;
+ }
