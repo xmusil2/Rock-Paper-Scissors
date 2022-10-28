@@ -19,7 +19,7 @@ let player_health = 5;
 let computer_health = 5;
 
 function setUpGame(){
-    const divNames = ['healtBarsDiv', 'resultDiv', 'computerChoiceDiv', 'vsDiv', 'playerchoiceDiv', 'optionsDiv', 'playAgainDiv']
+    const divNames = ['healtBarsDiv', 'resultDiv', 'computerChoiceDiv', 'vsDiv', 'playerchoiceDiv', 'optionsDiv', 'playDivAgain']
     for (let i = 0; i < divNames.length; i++){
         const div = document.createElement('div');
         div.className = divNames[i];
@@ -120,12 +120,12 @@ function endGame(){
     for(let i = 0; i < 3; i++){
         document.getElementById(i).disabled = true;
     }
-    const playAgainDiv = document.getElementsByClassName('playAgainDiv');
+    const playAgainDivElement = document.getElementsByClassName('playDivAgain');
     const btn_play_again = document.createElement('button');
     btn_play_again.innerHTML = 'Play again';
     btn_play_again.className = 'start_game_btn'
     btn_play_again.onclick = function(){playAgain()};
-    playAgainDiv[0].appendChild(btn_play_again);
+    playAgainDivElement[0].appendChild(btn_play_again);
 }
 
 function calculateHearts(player_hearts, computer_hearts){
