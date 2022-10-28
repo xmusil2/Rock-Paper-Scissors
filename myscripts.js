@@ -23,6 +23,9 @@ function setUpGame(){
     for (let i = 0; i < divNames.length; i++){
         const div = document.createElement('div');
         div.className = divNames[i];
+        if ((i < 5) && (i > 0)){
+            div.className += ' resultStyle';
+        }
         document.body.appendChild(div);
     }
 
@@ -58,7 +61,7 @@ function setUpGame(){
     const resultDiv = document.getElementsByClassName('resultDiv');
     const computerChoiceDiv = document.getElementsByClassName('computerChoiceDiv');
     const vsTxt = document.getElementsByClassName('vsDiv');
-    vsTxt[0].innerHTML = 'VS'
+
     const informatice_heading = document.getElementsByClassName('playerchoiceDiv');
     informatice_heading[0].innerHTML = 'Select your choice';
 
@@ -81,8 +84,9 @@ function setUpGame(){
             const playerChoice = parseInt(btn.id);
             let result = playRound(computerChoice, playerChoice);
             resultDiv[0].innerHTML = result[0];
-            computerChoiceDiv[0].innerHTML = result[1];
-            informatice_heading[0].innerHTML = result[2];
+            vsTxt[0].innerHTML = 'VS';
+            computerChoiceDiv[0].innerHTML = 'Compuer choice: ' + result[1];
+            informatice_heading[0].innerHTML = 'Player choice: ' + result[2];
         });
     });
 }
@@ -116,12 +120,12 @@ function endGame(){
     for(let i = 0; i < 3; i++){
         document.getElementById(i).disabled = true;
     }
-
+    const playAgainDiv = document.getElementsByClassName('playAgainDiv');
     const btn_play_again = document.createElement('button');
     btn_play_again.innerHTML = 'Play again';
     btn_play_again.className = 'start_game_btn'
     btn_play_again.onclick = function(){playAgain()};
-    document.body.appendChild(btn_play_again);
+    playAgainDiv[0].appendChild(btn_play_again);
 }
 
 function calculateHearts(player_hearts, computer_hearts){
