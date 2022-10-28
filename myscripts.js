@@ -80,7 +80,7 @@ function setUpGame(){
     const btns = document.querySelectorAll('.btn_images');
     btns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            const computerChoice = 0;//Math.floor(Math.random() * 3);
+            const computerChoice = Math.floor(Math.random() * 3);
             const playerChoice = parseInt(btn.id);
             let result = playRound(computerChoice, playerChoice);
             resultDiv[0].innerHTML = result[0];
